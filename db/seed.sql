@@ -5,10 +5,10 @@
 -- );
 
 
-CREATE TABLE product (
-    product_id SERIAL PRIMARY KEY NOT NULL,
-    name VARCHAR(40),
-    description VARCHAR(80),
-    price INTEGER,
-    image_url TEXT
-);
+-- CREATE TABLE product (
+--     product_id SERIAL PRIMARY KEY NOT NULL,
+--     name VARCHAR(40),
+--     description VARCHAR(80),
+--     price INTEGER,
+--     image_url TEXT
+-- );
