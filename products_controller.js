@@ -16,10 +16,10 @@ module.exports = {
 
    getOne: (req, res, next ) => {
       const dbInstance = req.app.get('db');
-      const {id} = req.params
+      const { id } = req.params;
 
       dbInstance.read_product(id)
-      .then( (res) => res.status(200).send(res.data) )
+      .then( (product) => res.status(200).send(product) )
       .catch( err => {
          res.status(500).send({err: "Something went wrong."});
          console.log(err)
@@ -33,7 +33,7 @@ module.exports = {
       const dbInstance = req.app.get('db');
 
       dbInstance.read_products()
-      .then( () => res.sendStatus(200) )
+      .then( (products) => res.send(products) )
       .catch( err => {
          res.status(500).send({err: "Something went wrong."});
          console.log(err)
